@@ -2,47 +2,41 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgba(0, 0, 0, 0);
   font-family: 'Montserrat', sans-serif;
-  background-color: transparent;
-  overflow: hidden;
 }
 
 #chat-container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 20px;
-  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: 100vh;
+  padding: 10px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
-.bubble {
-  background: #ffc0e9;
-  border-radius: 20px;
-  padding: 12px 16px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  max-width: 70%;
-  animation: slideIn 0.3s ease;
+.chat-message {
+  background-color: #ffc0cb;
+  color: black;
+  padding: 6px 10px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  max-width: 640px;
+  word-wrap: break-word;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  line-height: 1.3em;
+  display: inline-block;
 }
 
 .username {
   font-weight: bold;
-  color: #b0006d;
 }
 
-.pronouns-badge {
-  font-size: 0.85em;
+.habbo {
+  font-size: 12px;
   color: #555;
   margin-left: 6px;
-}
-
-.message-wrapper {
-  display: block;
-  margin-top: 4px;
-  color: #333;
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(-20px); }
-  to { opacity: 1; transform: translateX(0); }
 }
