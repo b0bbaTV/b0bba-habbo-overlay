@@ -35,3 +35,19 @@ function addChatMessage(twitchName, message) {
   container.appendChild(bubble);
   container.scrollTop = container.scrollHeight;
 }
+window.addEventListener('DOMContentLoaded', () => {
+  loadHabboNames();
+});
+
+// Listen for Twitch chat messages via StreamElements overlay system
+window.addEventListener('onEventReceived', function (obj) {
+  const listener = obj.detail.listener;
+  const event = obj.detail.event;
+
+  if (listener === 'message' && event.data) {
+    const twitchName = event.data.displayName || event.data.nick;
+    const message = event.data.text;
+    addChatMessage(twitchName, message);
+  }
+});
+
