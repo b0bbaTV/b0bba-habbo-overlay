@@ -1,5 +1,5 @@
 
-const HABBO_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/your-published-sheet-id/pub?output=tsv';
+const HABBO_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR9ZuD9s9jBDX7DELfTVZfnciyUrPnEWUnA6AgsXIihKYPYvMlyeub-WpZfBhtpkrTGjVj1flijXpm6/pub?output=tsv';
 
 let twitchToHabboMap = {};
 
