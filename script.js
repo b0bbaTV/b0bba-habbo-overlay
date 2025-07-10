@@ -35,9 +35,3 @@ function addChatMessage(twitchName, message) {
   container.appendChild(bubble);
   container.scrollTop = container.scrollHeight;
 }
-
-// Simulated test message (delete this when connecting to live chat)
-window.addEventListener('DOMContentLoaded', () => {
-  loadHabboNames();
-  setTimeout(() => addChatMessage('b0bbaTV', 'I just pulled a purple Labubu! 💜'), 1000);
-});
